@@ -12,13 +12,13 @@ bot.start((ctx) => {
 });
 
 const handler = async (event) => {
-  console.log('its me!')
+  console.log({event})
   try {
     // const subject = event.queryStringParameters.name || "World";
     await bot.handleUpdate(JSON.parse(event.body));
     return {
       statusCode: 200,
-      body: "its body",
+      body: JSON.stringify({ message: `its body message` }),
     };
   } catch (error) {
     return { statusCode: 500, body: error.toString() };
