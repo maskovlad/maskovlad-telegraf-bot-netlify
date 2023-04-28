@@ -12,6 +12,7 @@ bot.start((ctx) => {
 });
 
 const handler = async (event) => {
+  console.log('its me!')
   try {
     // const subject = event.queryStringParameters.name || "World";
     await bot.handleUpdate(JSON.parse(event.body));
