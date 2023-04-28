@@ -18,7 +18,7 @@ const handler = async (event) => {
     await bot.handleUpdate(JSON.parse(event.body));
     return {
       statusCode: 200,
-      body: "",
+      body: "its body",
     };
   } catch (error) {
     return { statusCode: 500, body: error.toString() };
